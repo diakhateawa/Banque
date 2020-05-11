@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="358.0" prefWidth="722.0" style="-fx-background-color: #DADADA;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CProfil">
+   <children>
+      <JFXButton layoutX="118.0" layoutY="156.0" onAction="#handleAjouter" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #2f4f89;" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtLibelle" focusColor="#e95c0c" layoutX="142.0" layoutY="57.0" prefHeight="39.0" prefWidth="146.0" unFocusColor="#e95c0c">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="54.0" layoutY="66.0" styleClass="label-form" text="Libelle :" textFill="#2f4f89">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbvProfil" layoutX="305.0" layoutY="57.0" prefHeight="262.0" prefWidth="381.0" style="-fx-background-color: #FFFFFF;">
+         <columns>
+            <TableColumn fx:id="tbcId" prefWidth="116.0" text="ID" />
+            <TableColumn fx:id="tbcLibelle" prefWidth="264.0" text="Libelle" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

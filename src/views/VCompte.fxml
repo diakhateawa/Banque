@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #DADADA;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VCompte">
+   <children>
+      <TableView fx:id="tbvCcompte" layoutX="22.0" layoutY="480.0" prefHeight="187.0" prefWidth="829.0" style="-fx-background-color: #FFFFFF;">
+         <columns>
+            <TableColumn fx:id="tbcNcompte" maxWidth="74.0" prefWidth="74.0" text="N° Compte" />
+            <TableColumn fx:id="tbcNCI" maxWidth="107.0" prefWidth="77.0" text="N° CNI" />
+            <TableColumn fx:id="tbcNom" maxWidth="107.0" prefWidth="62.0" text="NOM" />
+            <TableColumn fx:id="tbcPrenom" maxWidth="120.0" prefWidth="76.0" text="PRENOM" />
+            <TableColumn fx:id="tbcSolde" maxWidth="154.0" prefWidth="67.0" text="Solde" />
+            <TableColumn fx:id="tbcEtat" maxWidth="107.0" prefWidth="52.0" text="Etat" />
+            <TableColumn fx:id="tbcTypeCompte" maxWidth="124.0" prefWidth="69.0" text="Type" />
+            <TableColumn fx:id="tbcEmail" maxWidth="154.0" prefWidth="72.0" text="Email" />
+            <TableColumn fx:id="tbcTelephone" maxWidth="154.0" prefWidth="77.0" text="Telephone" />
+            <TableColumn fx:id="tbcAgence" maxWidth="154.0" prefWidth="69.0" text="Agence" />
+            <TableColumn fx:id="tbcDateFin" maxWidth="154.0" prefWidth="69.0" text="D.Fin" />
+            <TableColumn fx:id="tbcDateCreat" maxWidth="154.0" prefWidth="69.0" text="D.Création" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtNom" focusColor="#e95c0c" layoutX="136.0" layoutY="60.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#e95c0c">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="27.0" layoutY="75.0" styleClass="label-form" text="Nom :" textFill="#2f4f89">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="txtCPassword" focusColor="#e95c0c" layoutX="136.0" layoutY="251.0" prefHeight="25.0" prefWidth="175.0" unFocusColor="#e95c0c" />
+      <Label layoutX="27.0" layoutY="232.0" styleClass="label-form" text="Confirmer&#10;Password :" textFill="#2f4f89">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="198.0" styleClass="label-form" text="Password :" textFill="#2f4f89">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="txtPassword" focusColor="#e95c0c" layoutX="136.0" layoutY="198.0" prefHeight="25.0" prefWidth="175.0" unFocusColor="#e95c0c" />
+      <Label layoutX="27.0" layoutY="166.0" styleClass="label-form" text="Login :" textFill="#2f4f89">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtLogin" focusColor="#e95c0c" layoutX="136.0" layoutY="147.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#e95c0c">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPrenom" focusColor="#e95c0c" layoutX="136.0" layoutY="102.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#e95c0c">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="27.0" layoutY="117.0" styleClass="label-form" text="Prénom :" textFill="#2f4f89">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="416.0" layoutY="210.0" onAction="#handleEnregistrer" prefHeight="37.0" prefWidth="151.0" style="-fx-background-color: #2F4F89;" text="Enregistrer" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="22.0" layoutY="33.0" styleClass="label-form" text="N° CNI :" textFill="#2f4f89">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtNci" focusColor="#e95c0c" layoutX="136.0" layoutY="22.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#e95c0c">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="184.0" layoutY="418.0" onAction="#handleVerifier" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #2F4F89;" text="Vérifier" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="27.0" layoutY="291.0" styleClass="label-form" text="Adresse :" textFill="#2f4f89">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAdresse" focusColor="#e95c0c" layoutX="136.0" layoutY="276.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#e95c0c">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtEmail" focusColor="#e95c0c" layoutX="136.0" layoutY="318.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#e95c0c">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="27.0" layoutY="333.0" styleClass="label-form" text="Email :" textFill="#2f4f89">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="380.0" styleClass="label-form" text="Telephone :" textFill="#2f4f89">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtTelephone" focusColor="#e95c0c" layoutX="136.0" layoutY="360.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#e95c0c">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cbxTypeCompte" focusColor="#e95c0c" layoutX="423.0" layoutY="31.0" prefHeight="25.0" prefWidth="213.0" />
+      <Label layoutX="325.0" layoutY="30.0" styleClass="label-form" text="Compte :" textFill="#2f4f89">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSolde" focusColor="#e95c0c" layoutX="416.0" layoutY="83.0" prefHeight="39.0" prefWidth="151.0" unFocusColor="#e95c0c">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="325.0" layoutY="97.0" styleClass="label-form" text="Solde :" textFill="#2f4f89">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateFin" layoutX="408.0" layoutY="153.0" prefHeight="27.0" prefWidth="165.0" promptText="Date De Fin Blocage" />
+      <Label layoutX="613.0" layoutY="109.0" styleClass="label-form" text="N° Compte :" textFill="#2f4f89">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cbxNCompteBlocage" focusColor="#e95c0c" layoutX="741.0" layoutY="110.0" prefHeight="25.0" prefWidth="151.0" />
+      <JFXButton fx:id="btnEtat" layoutX="672.0" layoutY="210.0" onAction="#handleEtat" prefHeight="37.0" prefWidth="151.0" style="-fx-background-color: #2F4F89;" text="Etat" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblError" layoutX="129.0" layoutY="320.0" prefHeight="19.0" prefWidth="175.0" textFill="#d70505">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

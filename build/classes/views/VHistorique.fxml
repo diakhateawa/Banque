@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="648.0" prefWidth="967.0" style="-fx-background-color: #DADADA;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CHistorique">
+   <children>
+      <JFXButton layoutX="810.0" layoutY="48.0" onAction="#handleRechercher" prefHeight="37.0" prefWidth="133.0" style="-fx-background-color: #2F4F89;" text="Rechercher" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cbxCompte" focusColor="#e95c0c" layoutX="676.0" layoutY="35.0" prefHeight="25.0" prefWidth="98.0" promptText="Compte" unFocusColor="#e95c0c" />
+      <DatePicker fx:id="dateRecherche" layoutX="549.0" layoutY="33.0" prefHeight="27.0" prefWidth="118.0" promptText="Date" />
+      <JFXComboBox fx:id="cbxAgence" focusColor="#e95c0c" layoutX="14.0" layoutY="35.0" prefHeight="25.0" prefWidth="118.0" promptText="Agence" unFocusColor="#e95c0c" />
+      <TableView fx:id="tbvTransaction" layoutX="15.0" layoutY="94.0" prefHeight="443.0" prefWidth="806.0" style="-fx-background-color: #FFFFFF;">
+         <columns>
+            <TableColumn fx:id="tbcDate" prefWidth="85.0" text="Date" />
+            <TableColumn fx:id="tbcTypeCompte" prefWidth="105.0" text="Type Transaction" />
+            <TableColumn fx:id="tbcCSource" prefWidth="122.0" text="Compte Source " />
+            <TableColumn fx:id="tbcCCible" prefWidth="129.0" text="Compte Cible" />
+            <TableColumn fx:id="tbcMontant" prefWidth="117.0" text="Montant" />
+            <TableColumn fx:id="tbcAgence" prefWidth="122.0" text="Agence" />
+            <TableColumn fx:id="tbcGuichet" prefWidth="96.0" text="Guichet" />
+         </columns>
+      </TableView>
+      <JFXComboBox fx:id="cbxGuichet" focusColor="#e95c0c" layoutX="142.0" layoutY="35.0" prefHeight="25.0" prefWidth="118.0" promptText="Guichet" unFocusColor="#e95c0c" />
+      <JFXComboBox fx:id="cbxCaissier" focusColor="#e95c0c" layoutX="268.0" layoutY="35.0" prefHeight="25.0" prefWidth="118.0" promptText="Caissier" unFocusColor="#e95c0c" />
+   </children>
+</AnchorPane>
